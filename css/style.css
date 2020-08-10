@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #000000;
+}
+
+.wrapper{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+.wrapper.blur{
+    opacity: .3;
+    pointer-events: none;
+    user-select: none;
+}
+
+.image{
+    margin-top: 7vh;
+    margin-bottom: 8vh;
+}
+.image img{
+    height: 12em;
+}
+
+.form{
+    width: 65%;
+    min-height: 20rem;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+} 
+
+#text-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+#text-form .heading{
+    color: #ffffff;
+    margin-top:2rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+.text{
+    margin-bottom: 10px;
+}
+textarea{
+    width: 25rem;
+    height : 3rem;
+    padding: 5px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+
+textarea:focus{
+    border: 2px solid #ffffff;
+    background-color: #ffffff;
+    color: #000000;
+}
+.range{
+    margin-bottom: 15px;
+}
+input[type="range"]{
+    width: 20rem;
+    height: 3px;
+}
+input[type="range"]:focus{
+    outline: black;
+    cursor: pointer;
+}
+
+label{
+    color: #ffffff;
+    font-size: .7rem;
+}
+
+.badge{
+    margin-top: 4px;
+    margin-left: 5px;
+    float: right;
+    background-color: #296d98;
+    width: 25px;
+    height: 20px;
+    position: relative;
+}
+
+.p-val, .r-val{
+    position: absolute;
+    font-size: .7rem;
+    top:3px;
+    left:5px;
+    color: #ffffff;
+}
+.select{
+    margin-bottom: 15px;
+}
+select{
+    width: 10rem;
+    font-size: 1rem;
+    padding: 3px;
+    border: 2px solid #ffffff;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.btn{
+    width: 20rem;
+    height: 2rem;
+    margin-bottom: 15px;
+    background-color: #296d98;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    cursor: pointer;
+}
+
+.modal{
+    background: url('../images/speaker.gif') no-repeat;
+    background-size: cover;
+    position: fixed;
+    top:50%;
+    left: 50%;
+    width: 20em;
+    height: 15em;
+    transform: translate(-50%,-50%) scale(0);
+    transition: 500ms ease-in-out;
+    z-index: 10;
+}
+
+.modal.active{
+    transform: translate(-50%,-50%) scale(1);
+    
+} 
+@media (max-width: 670px){
+    .form{
+        width : 80%;
+    }
+
+    #text-form .heading{
+        font-size: 1.2rem;
+    }
+    textarea, input[type="range"]{
+        width: auto;
+    }
+    .btn{
+        width: 50%;
+    }
+    
+}

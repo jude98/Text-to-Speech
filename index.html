@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text-Speech</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Head    ---  -- -->
+    <div class="wrapper">
+        <div class="image">
+            <img src="images/speech.png" alt="">
+        </div>
+
+        <div class="form">
+            
+            <form id="text-form">
+                <div class="heading">
+                    <span>Text to Speech</span>
+                </div>
+                <div class="text">
+                    <textarea name="" id="text-area" placeholder="Enter anything"></textarea>
+                </div>
+                <div class="range">
+                    <label for="pitch">Pitch</label>
+                    <input type="range" name="pitch" id="pitch" min="0" max="2" value="1" step="0.1">
+                    <div class="badge">
+                        <p class="p-val"></p>
+                    </div>
+                </div>
+                <div class="range">
+                    <label for="rate">Rate</label>
+                    <input type="range" name="rate" id="rate" min="0.5" max="2" value="1" step="0.1">
+                    <div class="badge">
+                        <p class="r-val"></p>
+                    </div>
+                </div>
+                <div class="select">
+                    <select id="voice-select"></select>
+                    </select>
+                </div>
+                <button type="submit" class="btn">Play Voice</button>
+            </form>
+        </div>
+    </div>  
+    
+    <div class="modal" id="modal"></div>
+ 
+
+    <script src="js/app.js"></script>
+</body>
+</html>
